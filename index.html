@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Lane — Vintage & Collectables</title>
+  <style>
+    :root{
+      --bg:#f6f1e6;
+      --ink:#1f1f1f;
+      --muted:#5a5a5a;
+      --card:#fbf7ee;
+      --line:#e6dcc9;
+      --accent:#8a6b3d;
+      --shadow: 0 14px 40px rgba(0,0,0,.12);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+    }
+    .wrap{
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    header{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      border-bottom:1px solid var(--line);
+      padding-bottom:18px;
+      margin-bottom:22px;
+    }
+    .brand h1{
+      margin:0;
+      font-size:42px;
+      letter-spacing:.2px;
+    }
+    .brand .sub{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.35;
+      max-width: 62ch;
+    }
+    .pill{
+      display:inline-block;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.45);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .card h2{
+      margin:0 0 10px 0;
+      font-size:22px;
+    }
+    .card p{
+      margin:0 0 12px 0;
+      color:var(--muted);
+      line-height:1.5;
+      font-size:16px;
+    }
+
+    .cats{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      margin-top:10px;
+    }
+    @media (max-width: 520px){
+      .cats{ grid-template-columns: repeat(2, 1fr); }
+    }
+    .cat{
+      border:1px dashed var(--line);
+      border-radius: 12px;
+      padding:12px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      background:rgba(255,255,255,.35);
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 14px;
+    }
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      color:var(--ink);
+      background: #fff;
+      transition: transform .05s ease, box-shadow .2s ease;
+    }
+    a.btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 20px rgba(0,0,0,.10); }
+    a.btn.primary{
+      background: linear-gradient(180deg, #fff, #f7efe0);
+      border-color: #e5d3b3;
+    }
+    .small{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:10px;
+    }
+
+    .img{
+      width:100%;
+      height:auto;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow: 0 10px 28px rgba(0,0,0,.10);
+    }
+    .imgcap{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.35;
+    }
+
+    footer{
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .accent{ color: var(--accent); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>Memory Lane</h1>
+        <div class="sub">
+          <span class="accent">Vintage &amp; Collectables</span> — mid-century lamps, cane furniture, sideboards, fabrics and those odd little treasures that still have a pulse.
+        </div>
+      </div>
+      <div class="pill">Based on the Central Coast · Buying · Selling · Sourcing</div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>A one-page hello</h2>
+        <p>
+          This is a simple demo page to start a conversation — nothing more, nothing less.
+          If this resonates, the next step is a proper site with galleries, stock updates, and a clean enquiry flow.
+        </p>
+
+        <div class="cats">
+          <div class="cat">Lamps</div>
+          <div class="cat">Cane</div>
+          <div class="cat">Sideboards</div>
+          <div class="cat">Fabrics</div>
+          <div class="cat">Small Objects</div>
+          <div class="cat">Oddities</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="tel:0452465827">📞 Call Jackie · 0452 465 827</a>
+          <a class="btn" href="sms:0452465827">💬 Text Jackie</a>
+          <a class="btn" href="tel:0425240697">📞 Call Lesley · 0425 240 697</a>
+          <a class="btn" href="sms:0425240697">💬 Text Lesley</a>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="https://instagram.com/memory_lane_central_coast" target="_blank" rel="noopener">📷 Instagram: @memory_lane_central_coast</a>
+        </div>
+
+        <div class="small">
+          Want something sourced? Send a photo + a rough budget, and we’ll hunt it like a bloodhound with better taste.
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>Quick proof</h2>
+
+        <img class="img" src="./assets/bizcard.jpg" alt="Memory Lane business card" />
+        <div class="imgcap">Business card snapshot (easy contact, socials).</div>
+
+        <div style="height:14px"></div>
+
+        <img class="img" src="./assets/domain.jpg" alt="Domain screenshot" />
+        <div class="imgcap">Domain / setup snapshot — this becomes the real website when ready.</div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© Memory Lane · Vintage &amp; Collectables</div>
+      <div>Built with care by Adam Marsh · <span class="accent">simple now, scalable later</span></div>
+    </footer>
+  </div>
+</body>
+</html>
