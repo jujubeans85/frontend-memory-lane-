@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Memory Lane — Vintage & Collectables (Central Coast)</title>
 
-  <meta name="description" content="Memory Lane — Vintage & Collectables on the Central Coast. Buying, selling and sourcing mid-century lamps, cane furniture, sideboards, fabrics and odd treasures." />
+  <meta name="description" content="Memory Lane — Vintage & Collectables on the Central Coast. Buying, selling and sourcing lamps, cane furniture, sideboards, fabrics and odd treasures." />
   <meta name="theme-color" content="#f6f1e6" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Memory Lane — Vintage & Collectables" />
-  <meta property="og:description" content="Buying • Selling • Sourcing. Mid-century lamps, cane, sideboards, fabrics and odd treasures. Central Coast." />
+  <meta property="og:description" content="Buying • Selling • Sourcing. Lamps, cane, sideboards, fabrics and odd treasures. Central Coast." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -38,14 +38,6 @@
       margin: 0 auto;
       padding: 28px 18px 60px;
     }
-    .skip{
-      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
-    }
-    .skip:focus{
-      left:18px;top:18px;width:auto;height:auto;padding:10px 12px;
-      background:#fff;border:1px solid var(--line);border-radius:12px;z-index:9999;
-    }
-
     header{
       display:flex;
       gap:18px;
@@ -58,7 +50,6 @@
     @media (max-width: 860px){
       header{flex-direction:column;align-items:flex-start}
     }
-
     .brand h1{
       margin:0;
       font-size:42px;
@@ -82,7 +73,8 @@
       white-space:nowrap;
     }
     .nav{
-      display:flex;gap:10px;flex-wrap:wrap;margin-top:12px
+      margin-top:12px;
+      display:flex;gap:10px;flex-wrap:wrap;
     }
     .nav a{
       text-decoration:none;
@@ -92,6 +84,7 @@
       font-size:13px;color:var(--muted);
     }
     .nav a:hover{color:var(--ink)}
+    .accent{ color: var(--accent); }
 
     .grid{
       display:grid;
@@ -121,14 +114,6 @@
       font-size:16px;
     }
 
-    .kicker{
-      font-size:13px;
-      color:var(--muted);
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      margin:0 0 10px 0;
-    }
-
     .cats{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -146,6 +131,15 @@
       color:var(--muted);
       font-size:14px;
       background:rgba(255,255,255,.35);
+    }
+
+    .divider{height:1px;background:var(--line);margin:16px 0}
+    .kicker{
+      font-size:13px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin:0 0 10px 0;
     }
 
     .actions{
@@ -172,24 +166,47 @@
       background: linear-gradient(180deg, #fff, #f7efe0);
       border-color: #e5d3b3;
     }
-
     .small{
       font-size:13px;
       color:var(--muted);
       margin-top:10px;
       line-height:1.45;
     }
-    .accent{ color: var(--accent); }
 
-    .list{
-      margin:12px 0 0 0;
-      padding-left: 18px;
-      color:var(--muted);
-      line-height:1.55;
-      font-size:15px;
+    /* featured */
+    .featured{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      margin-top:12px;
     }
-    .list li{margin:6px 0}
+    @media (max-width: 620px){
+      .featured{grid-template-columns: repeat(2, 1fr);}
+    }
+    figure{
+      margin:0;
+    }
+    .tile{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.35);
+      overflow:hidden;
+    }
+    .tile img{
+      display:block;
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      background:#fff;
+    }
+    .cap{
+      padding:10px 12px;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.35;
+    }
 
+    /* proof images */
     .img{
       width:100%;
       height:auto;
@@ -204,41 +221,20 @@
       font-size:13px;
       line-height:1.35;
     }
-
-    .divider{height:1px;background:var(--line);margin:16px 0}
-
-    .featured{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:10px;
-      margin-top:12px;
-    }
-    @media (max-width: 620px){
-      .featured{grid-template-columns: repeat(2, 1fr);}
-    }
-    .tile{
-      border:1px solid var(--line);
+    .note{
+      border:1px dashed var(--line);
       border-radius:14px;
-      background:rgba(255,255,255,.35);
       padding:12px;
-      color:rgba(0,0,0,.45);
+      background:rgba(255,255,255,.35);
+      color:var(--muted);
       font-size:13px;
-      min-height:94px;
-      display:flex;align-items:center;justify-content:center;
-      text-align:center;
+      line-height:1.45;
+      margin-top:12px;
     }
 
-    form{
-      margin-top:12px;
-      display:grid;
-      gap:10px;
-    }
-    label{
-      display:grid;
-      gap:6px;
-      font-size:13px;
-      color:var(--muted);
-    }
+    /* simple form */
+    form{ margin-top:12px; display:grid; gap:10px; }
+    label{ display:grid; gap:6px; font-size:13px; color:var(--muted); }
     input, textarea{
       border:1px solid var(--line);
       border-radius:12px;
@@ -275,33 +271,34 @@
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
   <div class="wrap">
     <header>
       <div class="brand">
-        <h1>Memory Lane</h1>
+        <img class="logo" src="./assets/logo.png" alt="Memory Lane logo" />
+        <div>
+          <h1>Memory Lane</h1>
         <div class="sub">
           <span class="accent">Vintage &amp; Collectables</span> — mid-century lamps, cane furniture, sideboards, fabrics and those odd little treasures that still have a pulse.
         </div>
-
         <nav class="nav" aria-label="Page navigation">
           <a href="#services">Services</a>
           <a href="#featured">Featured</a>
+          <a href="./gallery/">Gallery</a>
+          <a href="./about/">About</a>
           <a href="#how">How it works</a>
           <a href="#contact">Enquire</a>
+          <a href="./about/">About</a>
         </nav>
       </div>
-
-      <div class="pill">Central Coast · Buying · Selling · Sourcing</div>
+      <div class="pill">Based on the Central Coast · Buying · Selling · Sourcing · No </div>
     </header>
 
-    <main id="main" class="grid">
+    <div class="grid">
       <section class="card">
         <p class="kicker">Vintage, without the nonsense</p>
         <h2>Buy, sell, or get us to source a piece.</h2>
         <p>
-          We curate quality vintage and collectables across the Central Coast — lamps, cane, solid timber, textiles, and the little things that make a house feel like a home.
+          We curate quality vintage and collectables across the Central Coast — lamps, cane, solid timber, textiles, and the small objects that make a home feel alive.
         </p>
 
         <div class="cats" aria-label="Categories">
@@ -316,49 +313,46 @@
         <div id="services" class="divider"></div>
 
         <h2>Services</h2>
-        <ul class="list">
-          <li><strong>Buy:</strong> send photos and we’ll give you a straight answer — quick and fair.</li>
-          <li><strong>Sell:</strong> consignment or direct sale depending on the item and timing.</li>
-          <li><strong>Source:</strong> show us what you’re after, plus budget and suburb — we’ll hunt.</li>
-        </ul>
+        <p class="small">All prices shown as <strong>$00.00</strong> for now. Call/text to reserve or ask questions.</p>
 
-        <div class="actions" aria-label="Contact buttons">
-          <a class="btn primary" href="tel:+61452465827">📞 Call Jackie · 0452 465 827</a>
-          <a class="btn" href="sms:+61452465827">💬 Text Jackie</a>
-          <a class="btn primary" href="tel:+61425240697">📞 Call Lesley · 0425 240 697</a>
-          <a class="btn" href="sms:+61425240697">💬 Text Lesley</a>
-        </div>
-
-        <div class="actions">
-          <a class="btn" href="https://instagram.com/memory_lane_central_coast" target="_blank" rel="noopener">📷 Instagram: @memory_lane_central_coast</a>
-        </div>
-
-        <div class="small">
-          <strong>Fastest way to source:</strong> send a photo + rough budget + your suburb.
-          We’ll reply with options and a realistic timeframe (no fantasy promises).
-        </div>
-
-        <div id="featured" class="divider"></div>
-
-        <h2>Featured finds</h2>
-        <p class="small">Swap these placeholders for 6–9 hand-picked images (quickest way to look legit). Later we can replace this with an Instagram grid.</p>
-        <div class="featured" aria-label="Featured items placeholders">
-          <div class="tile">Add /assets/featured/01.jpg</div>
-          <div class="tile">Add /assets/featured/02.jpg</div>
-          <div class="tile">Add /assets/featured/03.jpg</div>
-          <div class="tile">Add /assets/featured/04.jpg</div>
-          <div class="tile">Add /assets/featured/05.jpg</div>
-          <div class="tile">Add /assets/featured/06.jpg</div>
+        <div class="featured" aria-label="Featured items">
+          <figure class="tile">
+            <img loading="lazy" src="./assets/featured/01.jpg" alt="Pink bird-print shade lamp" />
+            <figcaption class="cap">Pink bird-print shade lamp <span class="accent" style="float:right">$00.00</span></figcaption>
+          </figure>
+          <figure class="tile">
+            <img loading="lazy" src="./assets/featured/02.jpg" alt="Bush birds shade lamp with warm timber base" />
+            <figcaption class="cap">Bush birds shade lamp (warm timber base) <span class="accent" style="float:right">$00.00</span></figcaption>
+          </figure>
+          <figure class="tile">
+            <img loading="lazy" src="./assets/featured/03.jpg" alt="Retro floral lampshade" />
+            <figcaption class="cap">Retro floral lampshade <span class="accent" style="float:right">$00.00</span></figcaption>
+          </figure>
+          <figure class="tile">
+            <img loading="lazy" src="./assets/featured/04.jpg" alt="Statement patterned tall lamp" />
+            <figcaption class="cap">Statement patterned tall lamp <span class="accent" style="float:right">$00.00</span></figcaption>
+          </figure>
+          <figure class="tile">
+            <img loading="lazy" src="./assets/featured/05.jpg" alt="Green art-glass piece" />
+            <figcaption class="cap">Green art-glass piece <span class="accent" style="float:right">$00.00</span></figcaption>
+          </figure>
+          <figure class="tile">
+            <div class="cap" style="padding:16px">
+              <strong>Full gallery</strong><br />
+              Browse the gallery page for current / sample stock.<br /><br />
+              <a class="btn primary" href="./gallery/" style="display:inline-flex">Open Gallery</a>
+            </div>
+          </figure>
         </div>
 
         <div id="how" class="divider"></div>
 
         <h2>How sourcing works</h2>
-        <ul class="list">
-          <li>1) Text a photo (or a link to the vibe).</li>
-          <li>2) Add your budget + suburb + timeframe.</li>
-          <li>3) We come back with options — and prices that won’t insult your intelligence.</li>
-        </ul>
+        <p class="small">
+          1) Text a photo (or a link to the vibe).<br />
+          2) Add budget + suburb + timeframe.<br />
+          3) We come back with options — and prices that won’t insult your intelligence.
+        </p>
       </section>
 
       <aside class="card">
@@ -370,14 +364,17 @@
         <div style="height:14px"></div>
 
         <img class="img" src="./assets/domain.jpg" alt="Domain screenshot" />
-        <div class="imgcap">Setup snapshot — this is where the full site grows from.</div>
+        <div class="imgcap">Domain / setup snapshot — this becomes the full website when ready.</div>
+
+        <div class="note">
+          If these two images don’t show: add them to <strong>/assets</strong> as <strong>bizcard.jpg</strong> and <strong>domain.jpg</strong> (case-sensitive).
+        </div>
 
         <div id="contact" class="divider"></div>
 
-        <h2>Enquiry</h2>
-        <p class="small">This form can work with <strong>Netlify Forms</strong> (no backend). If you’re not on Netlify, we can switch to Formspree.</p>
+        <h2>Enquire</h2>
+        <p class="small">This form supports <strong>Netlify Forms</strong>. If you stay on GitHub Pages, we’ll swap to Formspree.</p>
 
-        <!-- Netlify Forms: works when deployed on Netlify. Safe to leave even on GitHub Pages. -->
         <form name="memorylane-enquiry" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="memorylane-enquiry" />
 
@@ -392,18 +389,16 @@
           </label>
 
           <label>
-            What are you after? (or what are you selling?)
+            What are you after (or selling)?
             <textarea name="message" placeholder="Example: ‘Cane armchair like this photo, budget $300–$500, The Entrance area, within 2 weeks.’"></textarea>
           </label>
 
           <button type="submit">Send enquiry</button>
         </form>
 
-        <div class="small">
-          Prefer old-school? Text is king. Photos help. Your budget helps more.
-        </div>
+        <p class="small">Prefer texting? Same details. Plus photos. Always photos.</p>
       </aside>
-    </main>
+    </div>
 
     <footer>
       <div>© <span id="y"></span> Memory Lane · Vintage &amp; Collectables</div>
