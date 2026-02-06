@@ -1,1 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Memory Lane</title>
+  <meta name="description" content="Gallery — Memory Lane vintage & collectables. Sample stock and recent finds." />
+  <style>
 
+:root{
+  --bg:#f6f1e6;
+  --ink:#1f1f1f;
+  --muted:#5a5a5a;
+  --card:#fbf7ee;
+  --line:#e6dcc9;
+  --accent:#8a6b3d;
+  --shadow: 0 14px 40px rgba(0,0,0,.12);
+  --radius: 18px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+}
+a{color:inherit}
+.wrap{max-width:1020px;margin:0 auto;padding:28px 18px 60px}
+header{
+  display:flex;gap:18px;align-items:flex-start;justify-content:space-between;
+  border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px;
+}
+@media (max-width:860px){header{flex-direction:column;align-items:flex-start}}
+.brand{display:flex;gap:14px;align-items:flex-start}
+.logo{
+  width:120px;height:auto;flex:0 0 auto;
+  border:1px solid var(--line);border-radius:14px;background:#fff;
+  box-shadow:0 10px 28px rgba(0,0,0,.10);
+  padding:10px;
+}
+.brand h1{margin:0;font-size:42px;letter-spacing:.2px}
+.brand .sub{margin-top:6px;color:var(--muted);font-size:16px;line-height:1.35;max-width:66ch}
+.pill{
+  display:inline-block;border:1px solid var(--line);background:rgba(255,255,255,.45);
+  padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted);white-space:nowrap;
+}
+.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.nav a{
+  text-decoration:none;border:1px solid var(--line);background:rgba(255,255,255,.35);
+  padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted);
+}
+.nav a:hover{color:var(--ink)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:18px;
+}
+.kicker{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin:0 0 10px 0}
+.small{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.45}
+.accent{color:var(--accent)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+a.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:12px 14px;border-radius:12px;border:1px solid var(--line);
+  text-decoration:none;color:var(--ink);background:#fff;
+  transition:transform .05s ease, box-shadow .2s ease;
+}
+a.btn:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(0,0,0,.10)}
+a.btn.primary{background:linear-gradient(180deg,#fff,#f7efe0);border-color:#e5d3b3}
+footer{
+  margin-top:28px;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+  button.chip{
+    border:1px solid var(--line);background:rgba(255,255,255,.45);color:var(--muted);
+    padding:8px 12px;border-radius:999px;font-size:13px;cursor:pointer;
+  }
+  button.chip.active{color:var(--ink);border-color:#e5d3b3;background:linear-gradient(180deg,#fff,#f7efe0)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media (max-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .item{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.10)}
+  .item img{width:100%;height:220px;object-fit:cover;display:block}
+  .meta{padding:12px 12px 14px;background:rgba(255,255,255,.85)}
+  .title{margin:0 0 6px 0;font-size:16px}
+  .tags{font-size:12px;color:var(--muted)}
+  .price{margin-top:8px;font-weight:700}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img class="logo" src="../assets/logo.png" alt="Memory Lane logo" />
+        <div>
+          <h1>Memory Lane</h1>
+          <div class="sub"><span class="accent">Gallery</span> — a clean, client-friendly view of current / sample stock.</div>
+          <nav class="nav" aria-label="Page navigation">
+            <a href="../index.html">Home</a>
+            <a href="../about/">About</a>
+            <a href="#contact">Enquire</a>
+          </nav>
+        </div>
+      </div>
+      <div class="pill">Central Coast · Prices shown as $00.00</div>
+    </header>
+
+    <section class="card">
+      <p class="kicker">Browse</p>
+      <div class="filters" aria-label="Category filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="lamps">Lamps</button>
+        <button class="chip" data-filter="shades">Shades</button>
+        <button class="chip" data-filter="glass">Glass</button>
+        <button class="chip" data-filter="decor">Decor</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="item" data-cat="lamps shades">
+          <img src="../assets/featured/01.jpg" alt="Vintage lamp with pink floral shade" loading="lazy" />
+          <div class="meta">
+            <p class="title">Vintage lamp — floral shade</p>
+            <div class="tags">Category: Lamps · Shades</div>
+            <div class="price">$00.00</div>
+          </div>
+        </article>
+
+        <article class="item" data-cat="lamps shades">
+          <img src="../assets/featured/02.jpg" alt="Lamp with bird print shade" loading="lazy" />
+          <div class="meta">
+            <p class="title">Lamp — bird print shade</p>
+            <div class="tags">Category: Lamps · Shades</div>
+            <div class="price">$00.00</div>
+          </div>
+        </article>
+
+        <article class="item" data-cat="shades decor">
+          <img src="../assets/featured/03.jpg" alt="Retro floral lampshade" loading="lazy" />
+          <div class="meta">
+            <p class="title">Retro floral lampshade</p>
+            <div class="tags">Category: Shades · Decor</div>
+            <div class="price">$00.00</div>
+          </div>
+        </article>
+
+        <article class="item" data-cat="lamps shades decor">
+          <img src="../assets/featured/04.jpg" alt="Tall lamp with patterned shade" loading="lazy" />
+          <div class="meta">
+            <p class="title">Tall lamp — patterned shade</p>
+            <div class="tags">Category: Lamps · Shades · Decor</div>
+            <div class="price">$00.00</div>
+          </div>
+        </article>
+
+        <article class="item" data-cat="glass decor">
+          <img src="../assets/featured/05.jpg" alt="Green glass piece" loading="lazy" />
+          <div class="meta">
+            <p class="title">Green glass piece</p>
+            <div class="tags">Category: Glass · Decor</div>
+            <div class="price">$00.00</div>
+          </div>
+        </article>
+      </div>
+
+      <div id="contact" class="actions">
+        <a class="btn primary" href="tel:+61452465827">📞 Call Jackie · 0452 465 827</a>
+        <a class="btn" href="sms:+61452465827">💬 Text Jackie</a>
+        <a class="btn primary" href="tel:+61425240697">📞 Call Lesley · 0425 240 697</a>
+        <a class="btn" href="sms:+61425240697">💬 Text Lesley</a>
+      </div>
+
+      <p class="small">To reserve or ask questions: text a screenshot, your suburb, and any timing notes. No socials required.</p>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Memory Lane · Vintage &amp; Collectables</div>
+      <div>Built with care · <span class="accent">simple now, scalable later</span></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const chips = Array.from(document.querySelectorAll('button.chip'));
+    const items = Array.from(document.querySelectorAll('.item'));
+
+    function setActive(btn){
+      chips.forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function applyFilter(filter){
+      items.forEach(it => {
+        const cats = (it.getAttribute('data-cat') || '').split(/\s+/).filter(Boolean);
+        const show = (filter === 'all') || cats.includes(filter);
+        it.style.display = show ? '' : 'none';
+      });
+    }
+
+    chips.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const f = btn.getAttribute('data-filter');
+        setActive(btn);
+        applyFilter(f);
+      });
+    });
+  </script>
+</body>
+</html>
