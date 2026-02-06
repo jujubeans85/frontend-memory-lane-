@@ -3,7 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Memory Lane — Vintage & Collectables</title>
+  <title>Memory Lane — Vintage & Collectables (Central Coast)</title>
+
+  <meta name="description" content="Memory Lane — Vintage & Collectables on the Central Coast. Buying, selling and sourcing mid-century lamps, cane furniture, sideboards, fabrics and odd treasures." />
+  <meta name="theme-color" content="#f6f1e6" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Memory Lane — Vintage & Collectables" />
+  <meta property="og:description" content="Buying • Selling • Sourcing. Mid-century lamps, cane, sideboards, fabrics and odd treasures. Central Coast." />
+  <meta property="og:type" content="website" />
+
   <style>
     :root{
       --bg:#f6f1e6;
@@ -16,17 +25,27 @@
       --radius: 18px;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
       background:var(--bg);
       color:var(--ink);
       font-family: ui-serif, Georgia, "Times New Roman", serif;
     }
+    a{color:inherit}
     .wrap{
       max-width: 1020px;
       margin: 0 auto;
       padding: 28px 18px 60px;
     }
+    .skip{
+      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+    }
+    .skip:focus{
+      left:18px;top:18px;width:auto;height:auto;padding:10px 12px;
+      background:#fff;border:1px solid var(--line);border-radius:12px;z-index:9999;
+    }
+
     header{
       display:flex;
       gap:18px;
@@ -36,6 +55,10 @@
       padding-bottom:18px;
       margin-bottom:22px;
     }
+    @media (max-width: 860px){
+      header{flex-direction:column;align-items:flex-start}
+    }
+
     .brand h1{
       margin:0;
       font-size:42px;
@@ -46,7 +69,7 @@
       color:var(--muted);
       font-size:16px;
       line-height:1.35;
-      max-width: 62ch;
+      max-width: 66ch;
     }
     .pill{
       display:inline-block;
@@ -58,6 +81,17 @@
       color:var(--muted);
       white-space:nowrap;
     }
+    .nav{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:12px
+    }
+    .nav a{
+      text-decoration:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.35);
+      padding:8px 12px;border-radius:999px;
+      font-size:13px;color:var(--muted);
+    }
+    .nav a:hover{color:var(--ink)}
 
     .grid{
       display:grid;
@@ -85,6 +119,14 @@
       color:var(--muted);
       line-height:1.5;
       font-size:16px;
+    }
+
+    .kicker{
+      font-size:13px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin:0 0 10px 0;
     }
 
     .cats{
@@ -130,11 +172,23 @@
       background: linear-gradient(180deg, #fff, #f7efe0);
       border-color: #e5d3b3;
     }
+
     .small{
       font-size:13px;
       color:var(--muted);
       margin-top:10px;
+      line-height:1.45;
     }
+    .accent{ color: var(--accent); }
+
+    .list{
+      margin:12px 0 0 0;
+      padding-left: 18px;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:15px;
+    }
+    .list li{margin:6px 0}
 
     .img{
       width:100%;
@@ -151,6 +205,61 @@
       line-height:1.35;
     }
 
+    .divider{height:1px;background:var(--line);margin:16px 0}
+
+    .featured{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      margin-top:12px;
+    }
+    @media (max-width: 620px){
+      .featured{grid-template-columns: repeat(2, 1fr);}
+    }
+    .tile{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.35);
+      padding:12px;
+      color:rgba(0,0,0,.45);
+      font-size:13px;
+      min-height:94px;
+      display:flex;align-items:center;justify-content:center;
+      text-align:center;
+    }
+
+    form{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
+    }
+    label{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    input, textarea{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      font-family: inherit;
+      font-size:16px;
+      background:#fff;
+      color:var(--ink);
+    }
+    textarea{resize:vertical;min-height:110px}
+    button{
+      border:1px solid #e5d3b3;
+      border-radius:12px;
+      padding:12px 14px;
+      font-family: inherit;
+      font-size:16px;
+      cursor:pointer;
+      background: linear-gradient(180deg, #fff, #f7efe0);
+    }
+    button:hover{box-shadow:0 10px 20px rgba(0,0,0,.10);transform:translateY(-1px)}
+
     footer{
       margin-top:28px;
       padding-top:18px;
@@ -162,11 +271,12 @@
       gap:12px;
       flex-wrap:wrap;
     }
-    .accent{ color: var(--accent); }
   </style>
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <div class="wrap">
     <header>
       <div class="brand">
@@ -174,19 +284,27 @@
         <div class="sub">
           <span class="accent">Vintage &amp; Collectables</span> — mid-century lamps, cane furniture, sideboards, fabrics and those odd little treasures that still have a pulse.
         </div>
+
+        <nav class="nav" aria-label="Page navigation">
+          <a href="#services">Services</a>
+          <a href="#featured">Featured</a>
+          <a href="#how">How it works</a>
+          <a href="#contact">Enquire</a>
+        </nav>
       </div>
-      <div class="pill">Based on the Central Coast · Buying · Selling · Sourcing</div>
+
+      <div class="pill">Central Coast · Buying · Selling · Sourcing</div>
     </header>
 
-    <div class="grid">
+    <main id="main" class="grid">
       <section class="card">
-        <h2>A one-page hello</h2>
+        <p class="kicker">Vintage, without the nonsense</p>
+        <h2>Buy, sell, or get us to source a piece.</h2>
         <p>
-          This is a simple demo page to start a conversation — nothing more, nothing less.
-          If this resonates, the next step is a proper site with galleries, stock updates, and a clean enquiry flow.
+          We curate quality vintage and collectables across the Central Coast — lamps, cane, solid timber, textiles, and the little things that make a house feel like a home.
         </p>
 
-        <div class="cats">
+        <div class="cats" aria-label="Categories">
           <div class="cat">Lamps</div>
           <div class="cat">Cane</div>
           <div class="cat">Sideboards</div>
@@ -195,11 +313,20 @@
           <div class="cat">Oddities</div>
         </div>
 
-        <div class="actions">
-          <a class="btn primary" href="tel:0452465827">📞 Call Jackie · 0452 465 827</a>
-          <a class="btn" href="sms:0452465827">💬 Text Jackie</a>
-          <a class="btn" href="tel:0425240697">📞 Call Lesley · 0425 240 697</a>
-          <a class="btn" href="sms:0425240697">💬 Text Lesley</a>
+        <div id="services" class="divider"></div>
+
+        <h2>Services</h2>
+        <ul class="list">
+          <li><strong>Buy:</strong> send photos and we’ll give you a straight answer — quick and fair.</li>
+          <li><strong>Sell:</strong> consignment or direct sale depending on the item and timing.</li>
+          <li><strong>Source:</strong> show us what you’re after, plus budget and suburb — we’ll hunt.</li>
+        </ul>
+
+        <div class="actions" aria-label="Contact buttons">
+          <a class="btn primary" href="tel:+61452465827">📞 Call Jackie · 0452 465 827</a>
+          <a class="btn" href="sms:+61452465827">💬 Text Jackie</a>
+          <a class="btn primary" href="tel:+61425240697">📞 Call Lesley · 0425 240 697</a>
+          <a class="btn" href="sms:+61425240697">💬 Text Lesley</a>
         </div>
 
         <div class="actions">
@@ -207,8 +334,31 @@
         </div>
 
         <div class="small">
-          Want something sourced? Send a photo + a rough budget, and we’ll hunt it like a bloodhound with better taste.
+          <strong>Fastest way to source:</strong> send a photo + rough budget + your suburb.
+          We’ll reply with options and a realistic timeframe (no fantasy promises).
         </div>
+
+        <div id="featured" class="divider"></div>
+
+        <h2>Featured finds</h2>
+        <p class="small">Swap these placeholders for 6–9 hand-picked images (quickest way to look legit). Later we can replace this with an Instagram grid.</p>
+        <div class="featured" aria-label="Featured items placeholders">
+          <div class="tile">Add /assets/featured/01.jpg</div>
+          <div class="tile">Add /assets/featured/02.jpg</div>
+          <div class="tile">Add /assets/featured/03.jpg</div>
+          <div class="tile">Add /assets/featured/04.jpg</div>
+          <div class="tile">Add /assets/featured/05.jpg</div>
+          <div class="tile">Add /assets/featured/06.jpg</div>
+        </div>
+
+        <div id="how" class="divider"></div>
+
+        <h2>How sourcing works</h2>
+        <ul class="list">
+          <li>1) Text a photo (or a link to the vibe).</li>
+          <li>2) Add your budget + suburb + timeframe.</li>
+          <li>3) We come back with options — and prices that won’t insult your intelligence.</li>
+        </ul>
       </section>
 
       <aside class="card">
@@ -220,14 +370,49 @@
         <div style="height:14px"></div>
 
         <img class="img" src="./assets/domain.jpg" alt="Domain screenshot" />
-        <div class="imgcap">Domain / setup snapshot — this becomes the real website when ready.</div>
+        <div class="imgcap">Setup snapshot — this is where the full site grows from.</div>
+
+        <div id="contact" class="divider"></div>
+
+        <h2>Enquiry</h2>
+        <p class="small">This form can work with <strong>Netlify Forms</strong> (no backend). If you’re not on Netlify, we can switch to Formspree.</p>
+
+        <!-- Netlify Forms: works when deployed on Netlify. Safe to leave even on GitHub Pages. -->
+        <form name="memorylane-enquiry" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="memorylane-enquiry" />
+
+          <label>
+            Name
+            <input name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Mobile
+            <input name="phone" autocomplete="tel" required />
+          </label>
+
+          <label>
+            What are you after? (or what are you selling?)
+            <textarea name="message" placeholder="Example: ‘Cane armchair like this photo, budget $300–$500, The Entrance area, within 2 weeks.’"></textarea>
+          </label>
+
+          <button type="submit">Send enquiry</button>
+        </form>
+
+        <div class="small">
+          Prefer old-school? Text is king. Photos help. Your budget helps more.
+        </div>
       </aside>
-    </div>
+    </main>
 
     <footer>
-      <div>© Memory Lane · Vintage &amp; Collectables</div>
+      <div>© <span id="y"></span> Memory Lane · Vintage &amp; Collectables</div>
       <div>Built with care by Adam Marsh · <span class="accent">simple now, scalable later</span></div>
     </footer>
   </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
