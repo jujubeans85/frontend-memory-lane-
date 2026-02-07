@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enquire — Memory Lane</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap header">
+    <div class="brand">
+      <img src="../assets/logo.png" alt="Memory Lane logo" />
+      <div class="txt">
+        <p class="name">Memory Lane</p>
+        <p class="tag">Vintage &amp; Collectables · Central Coast</p>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="" href="../index.html">Home</a>
+      <a class="" href="../services/">Services</a>
+      <a class="" href="../featured/">Featured</a>
+      <a class="" href="../shop/">Shop</a>
+      <a class="active" href="../enquire/">Enquire</a>
+      <a class="" href="../about/">About</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="hero alt" style="--hero-bg:url('../assets/bg1.jpg'); --hero-bg-alt:url('../assets/bg2.jpg')">
+    <div class="inner">
+      <div>
+        <h1 class="h1">Enquire</h1>
+        <p class="lede">Want something sourced? Selling something? Tell us what it is, your budget, your suburb, and your timeframe.</p>
+      </div>
+      <div class="card">
+        <h2>Fast contact</h2>
+        <p>Text beats email. Photos help.</p>
+        <div class="btnrow">
+          <a class="btn" href="sms:+61452465827">Text Jackie</a>
+          <a class="btn secondary" href="sms:+61425240697">Text Lesley</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Enquiry form</h2>
+    <p class="small">This form works on Netlify (no backend). If you’re on GitHub Pages only, use text message instead.</p>
+
+    <form name="memorylane-enquiry" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="memorylane-enquiry" />
+
+      <label>
+        Name
+        <input name="name" autocomplete="name" required />
+      </label>
+
+      <label>
+        Mobile
+        <input name="phone" autocomplete="tel" required />
+      </label>
+
+      <label>
+        What are you after (or selling)?
+        <textarea name="message" placeholder="Example: Cane chair, budget $300–$500, The Entrance area, within 2 weeks. Include photos if you can."></textarea>
+      </label>
+
+      <button type="submit">Send enquiry</button>
+    </form>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <div>© <span id="y"></span> Memory Lane</div>
+  <div>Built with care · <span style="color:var(--accent)">simple now, scalable later</span></div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
