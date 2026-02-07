@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enquire — Memory Lane</title>
+  <meta name="description" content="Memory Lane — Vintage & Collectables on the Central Coast. Buying, selling and sourcing." />
+  <link rel="stylesheet" href="/frontend-memory-lane-/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand">
+          <img src="/frontend-memory-lane-/assets/logo.png" alt="Memory Lane logo" />
+          <div>
+            <h1>Memory Lane</h1>
+            <div class="sub"><span class="accent">Vintage &amp; Collectables</span> — curated finds and sourcing on the Central Coast.</div>
+            <nav class="nav" aria-label="Site">
+              <a href="/frontend-memory-lane-/">Home</a>
+              <a href="/frontend-memory-lane-/services/">Services</a>
+              <a href="/frontend-memory-lane-/featured/">Featured</a>
+              <a href="/frontend-memory-lane-/gallery/">Gallery</a>
+              <a href="/frontend-memory-lane-/enquire/">Enquire</a>
+              <a href="/frontend-memory-lane-/about/">About</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="pill">Central Coast · Buying · Selling · Sourcing</div>
+    </header>
+
+    
+<main class="grid">
+  <section class="card">
+    <p class="kicker">Enquire</p>
+    <h2>Ask a question or request sourcing</h2>
+    <p>Best results: include a photo, budget, suburb, and timeframe.</p>
+
+    <div class="actions">
+      <a class="btn primary" href="tel:+61452465827">📞 Call Jackie · 0452 465 827</a>
+      <a class="btn" href="sms:+61452465827">💬 Text Jackie</a>
+      <a class="btn primary" href="tel:+61425240697">📞 Call Lesley · 0425 240 697</a>
+      <a class="btn" href="sms:+61425240697">💬 Text Lesley</a>
+    </div>
+
+    <div class="small">No IG. No socials. Just reach out and we’ll sort it.</div>
+  </section>
+
+  <aside class="card">
+    <h2>Enquiry form</h2>
+    <p class="small">Works on Netlify (no backend). If you’re on GitHub Pages only, it will still display but won’t submit.</p>
+
+    <form name="memorylane-enquiry" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="memorylane-enquiry" />
+
+      <label>
+        Name
+        <input name="name" autocomplete="name" required />
+      </label>
+
+      <label>
+        Mobile
+        <input name="phone" autocomplete="tel" required />
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" placeholder="Example: ‘Cane armchair like this photo, budget $300–$500, The Entrance area, within 2 weeks.’"></textarea>
+      </label>
+
+      <button type="submit">Send enquiry</button>
+    </form>
+
+    <div class="small">Tip: photos via text are still the fastest.</div>
+  </aside>
+</main>
+
+
+    <footer>
+      <div>© <span id="y"></span> Memory Lane · Vintage &amp; Collectables</div>
+      <div>Built with care · <span class="accent">simple now, scalable later</span></div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

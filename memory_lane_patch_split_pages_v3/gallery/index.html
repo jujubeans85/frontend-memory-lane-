@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Memory Lane</title>
+  <meta name="description" content="Memory Lane — Vintage & Collectables on the Central Coast. Buying, selling and sourcing." />
+  <link rel="stylesheet" href="/frontend-memory-lane-/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand">
+          <img src="/frontend-memory-lane-/assets/logo.png" alt="Memory Lane logo" />
+          <div>
+            <h1>Memory Lane</h1>
+            <div class="sub"><span class="accent">Vintage &amp; Collectables</span> — curated finds and sourcing on the Central Coast.</div>
+            <nav class="nav" aria-label="Site">
+              <a href="/frontend-memory-lane-/">Home</a>
+              <a href="/frontend-memory-lane-/services/">Services</a>
+              <a href="/frontend-memory-lane-/featured/">Featured</a>
+              <a href="/frontend-memory-lane-/gallery/">Gallery</a>
+              <a href="/frontend-memory-lane-/enquire/">Enquire</a>
+              <a href="/frontend-memory-lane-/about/">About</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="pill">Central Coast · Buying · Selling · Sourcing</div>
+    </header>
+
+    
+<main class="card">
+  <p class="kicker">Gallery</p>
+  <h2>Browse categories</h2>
+  <p class="small">Filters are instant. All images currently use placeholder #1 for reliability.</p>
+
+  <div class="filters" aria-label="Category filters">
+    <button class="filter active" data-filter="All" type="button">All</button>
+    <button class="filter" data-filter="Lamps" type="button">Lamps</button>
+    <button class="filter" data-filter="Shades" type="button">Shades</button>
+    <button class="filter" data-filter="Cane" type="button">Cane</button>
+    <button class="filter" data-filter="Sideboards" type="button">Sideboards</button>
+    <button class="filter" data-filter="Fabrics" type="button">Fabrics</button>
+    <button class="filter" data-filter="Glass" type="button">Glass</button>
+    <button class="filter" data-filter="Decor" type="button">Decor</button>
+  </div>
+
+  <div class="tiles" id="grid">
+    
+  <div class="tile" data-cat="Lamps">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Lamp with patterned shade" />
+    <div class="tbody">
+      <div class="meta"><span>Lamp with patterned shade</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Lamps</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Lamps">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Timber lamp base" />
+    <div class="tbody">
+      <div class="meta"><span>Timber lamp base</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Lamps</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Shades">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Retro shade (floral)" />
+    <div class="tbody">
+      <div class="meta"><span>Retro shade (floral)</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Shades</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Glass">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Green glass piece" />
+    <div class="tbody">
+      <div class="meta"><span>Green glass piece</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Glass</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Decor">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Vintage vase" />
+    <div class="tbody">
+      <div class="meta"><span>Vintage vase</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Decor</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Decor">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Small object / oddity" />
+    <div class="tbody">
+      <div class="meta"><span>Small object / oddity</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Decor</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Cane">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Cane chair / stool" />
+    <div class="tbody">
+      <div class="meta"><span>Cane chair / stool</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Cane</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Sideboards">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Storage piece" />
+    <div class="tbody">
+      <div class="meta"><span>Storage piece</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Sideboards</span> · placeholder image</div>
+    </div>
+  </div>
+
+
+  <div class="tile" data-cat="Fabrics">
+    <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Textile / cushion" />
+    <div class="tbody">
+      <div class="meta"><span>Textile / cushion</span><span class="price">$00.00</span></div>
+      <div class="small"><span class="accent">Fabrics</span> · placeholder image</div>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="actions">
+    <a class="btn primary" href="/frontend-memory-lane-/enquire/">Enquire about an item</a>
+    <a class="btn" href="/frontend-memory-lane-/featured/">See Featured</a>
+  </div>
+</main>
+
+<script>
+  const buttons = Array.from(document.querySelectorAll('.filter'));
+  const tiles = Array.from(document.querySelectorAll('.tile[data-cat]'));
+
+  function setActive(btn){
+    buttons.forEach(b => b.classList.toggle('active', b === btn));
+  }
+
+  function applyFilter(cat){
+    tiles.forEach(t => {
+      const show = (cat === 'All') || (t.dataset.cat === cat);
+      t.style.display = show ? '' : 'none';
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.filter;
+      setActive(btn);
+      applyFilter(cat);
+    });
+  });
+</script>
+
+
+    <footer>
+      <div>© <span id="y"></span> Memory Lane · Vintage &amp; Collectables</div>
+      <div>Built with care · <span class="accent">simple now, scalable later</span></div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
