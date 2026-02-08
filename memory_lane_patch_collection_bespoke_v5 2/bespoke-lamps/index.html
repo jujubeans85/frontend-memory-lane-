@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bespoke Lamps — Memory Lane</title>
+  <meta name="description" content="Memory Lane — Vintage & Collectables (Central Coast). Bespoke Lamps." />
+  <link rel="stylesheet" href="/frontend-memory-lane-/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/frontend-memory-lane-/assets/logo.png" alt="Memory Lane logo" />
+        <div>
+          <h1>Memory Lane</h1>
+          <div class="tag"><span style="color:var(--accent)">Vintage &amp; Collectables</span> — Central Coast</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Site navigation">
+          <a href="/frontend-memory-lane-/" class="">Home</a>
+          <a href="/frontend-memory-lane-/services/" class="">Services</a>
+          <a href="/frontend-memory-lane-/bespoke-lamps/" class="active">Bespoke Lamps</a>
+          <a href="/frontend-memory-lane-/collection/" class="">Collection</a>
+          <a href="/frontend-memory-lane-/enquire/" class="">Enquire</a>
+          <a href="/frontend-memory-lane-/about/" class="">About</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('/frontend-memory-lane-/assets/bg2.jpg');"></div>
+      <div class="hero-inner">
+        <h2>Bespoke Lamps</h2>
+        <p>Lighting and statement pieces. (Images are placeholders until stock photos are loaded.)</p>
+      </div>
+    </section>
+
+    
+    <section class="card" style="margin-top:16px">
+      <div class="split">
+        <h2 style="margin:0">Bespoke Lamps</h2>
+        <div class="small">All prices shown as $00.00 (placeholder)</div>
+      </div>
+      <p class="small">This page is designed to look full even before you load stock photos. Replace placeholders whenever you’re ready.</p>
+      <div class="filters" role="tablist" aria-label="Lamp filters">
+        <button class="chip active" data-filter="all" type="button">All</button>
+        <button class="chip" data-filter="table" type="button">Table</button>
+        <button class="chip" data-filter="floor" type="button">Floor</button>
+        <button class="chip" data-filter="shade" type="button">Shades</button>
+      </div>
+      <div class="tiles" id="tiles" style="margin-top:12px">
+        
+        <div class="item" data-cat="table">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Table Lamp #01" />
+          <div class="meta">
+            <p class="name">Table Lamp #01</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+
+        <div class="item" data-cat="table">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Table Lamp #02" />
+          <div class="meta">
+            <p class="name">Table Lamp #02</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+
+        <div class="item" data-cat="floor">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Floor Lamp #01" />
+          <div class="meta">
+            <p class="name">Floor Lamp #01</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+
+        <div class="item" data-cat="shade">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Statement Shade #01" />
+          <div class="meta">
+            <p class="name">Statement Shade #01</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+
+        <div class="item" data-cat="shade">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Statement Shade #02" />
+          <div class="meta">
+            <p class="name">Statement Shade #02</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+
+        <div class="item" data-cat="table">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Table Lamp #03" />
+          <div class="meta">
+            <p class="name">Table Lamp #03</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+
+        <div class="item" data-cat="floor">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Floor Lamp #02" />
+          <div class="meta">
+            <p class="name">Floor Lamp #02</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+
+        <div class="item" data-cat="shade">
+          <img src="/frontend-memory-lane-/assets/placeholder.png" alt="Statement Shade #03" />
+          <div class="meta">
+            <p class="name">Statement Shade #03</p>
+            <p class="price">$00.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const chips = Array.from(document.querySelectorAll('.chip'));
+      const items = Array.from(document.querySelectorAll('#tiles .item'));
+      function setActive(btn){ chips.forEach(c=>c.classList.remove('active')); btn.classList.add('active'); }
+      function apply(filter){ items.forEach(it=>{ const cat=it.getAttribute('data-cat'); it.style.display=(filter==='all'||cat===filter)?'':'none'; }); }
+      chips.forEach(btn=>btn.addEventListener('click', ()=>{ const f=btn.getAttribute('data-filter'); setActive(btn); apply(f); }));
+    </script>
+
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Memory Lane</div>
+      <div>Built with care · <span style="color:var(--accent)">simple now, scalable later</span></div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

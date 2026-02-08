@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enquire — Memory Lane</title>
+  <meta name="description" content="Memory Lane — Vintage & Collectables (Central Coast). Enquire." />
+  <link rel="stylesheet" href="/frontend-memory-lane-/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/frontend-memory-lane-/assets/logo.png" alt="Memory Lane logo" />
+        <div>
+          <h1>Memory Lane</h1>
+          <div class="tag"><span style="color:var(--accent)">Vintage &amp; Collectables</span> — Central Coast</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Site navigation">
+          <a href="/frontend-memory-lane-/" class="">Home</a>
+          <a href="/frontend-memory-lane-/services/" class="">Services</a>
+          <a href="/frontend-memory-lane-/bespoke-lamps/" class="">Bespoke Lamps</a>
+          <a href="/frontend-memory-lane-/collection/" class="">Collection</a>
+          <a href="/frontend-memory-lane-/enquire/" class="active">Enquire</a>
+          <a href="/frontend-memory-lane-/about/" class="">About</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('/frontend-memory-lane-/assets/bg2.jpg');"></div>
+      <div class="hero-inner">
+        <h2>Enquire</h2>
+        <p>Call or text is fastest. Form is optional.</p>
+      </div>
+    </section>
+
+    
+    <section class="card" style="margin-top:16px">
+      <h2>Enquire</h2>
+      <p>Tell us what you’re chasing (or what you’re selling). Photos help. Budget helps more.</p>
+      <div class="actions">
+        <a class="btn primary" href="tel:+61452465827">📞 Call Jackie · 0452 465 827</a>
+        <a class="btn" href="sms:+61452465827">💬 Text Jackie</a>
+        <a class="btn primary" href="tel:+61425240697">📞 Call Lesley · 0425 240 697</a>
+        <a class="btn" href="sms:+61425240697">💬 Text Lesley</a>
+      </div>
+      <hr/>
+      <p class="small">Optional form (works on Netlify. On GitHub Pages it won't store submissions unless you wire a backend.)</p>
+
+      <form class="form" name="memorylane-enquiry" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="memorylane-enquiry" />
+        <label>Name <input name="name" autocomplete="name" required></label>
+        <label>Mobile <input name="phone" autocomplete="tel" required></label>
+        <label>Message <textarea name="message" placeholder="Example: ‘Bespoke table lamp, budget $—, suburb, timeframe. Selling: photos + any notes.’"></textarea></label>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Memory Lane</div>
+      <div>Built with care · <span style="color:var(--accent)">simple now, scalable later</span></div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
