@@ -1,0 +1,3 @@
+# Netlify redirects
+/shop    /collection   301
+/gallery /collection   301
